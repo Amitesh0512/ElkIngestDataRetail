@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElkIngestDataRetail", "ElkIngestDataRetail\ElkIngestDataRetail.csproj", "{B17C8BBB-E141-47D1-B544-0E28898DC01B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B17C8BBB-E141-47D1-B544-0E28898DC01B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B17C8BBB-E141-47D1-B544-0E28898DC01B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B17C8BBB-E141-47D1-B544-0E28898DC01B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B17C8BBB-E141-47D1-B544-0E28898DC01B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A3A18C0A-56C1-4B2E-92EA-FF997FB4D828}
+	EndGlobalSection
+EndGlobal
