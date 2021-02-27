@@ -16,7 +16,7 @@ namespace ElkIngestDataRetail
         public async Task<FunctionResponseModel> GetDemographicsSendToELK(string CustId)
         {
             FunctionResponseModel _response = new FunctionResponseModel();
-            var influxDbClient = new InfluxDbClient("http://104.211.218.225:8086/", "username", "password", InfluxDbVersion.v_1_3);
+            var influxDbClient = new InfluxDbClient("http://influxurl:8086/", "username", "password", InfluxDbVersion.v_1_3);
             var ping = await influxDbClient.Diagnostics.PingAsync();
 
             try
@@ -25,9 +25,9 @@ namespace ElkIngestDataRetail
                 {
                     List<GetDemographicsResponseModel> DemographicsList = new List<GetDemographicsResponseModel>();
 
-                    var query1 = "SELECT time,CameraId,Age,Gender,StoreId FROM \"Demographics\"  WHERE \"CustId\"='" + CustId + "'";
+                    var query1 = "SELECT time,CameraId,Age,Gender,StoreId FROM \"MeasurementName\"  WHERE \"CustId\"='" + CustId + "'";
 
-                    var response = await influxDbClient.Client.QueryAsync(query1, "RT_Tanishq_PROD");
+                    var response = await influxDbClient.Client.QueryAsync(query1, "DataBaseName");
 
                     IEnumerable<Serie> series = response;
 

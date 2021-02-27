@@ -12,13 +12,13 @@ namespace ElkIngestDataRetail
         {
             try
             {
-                //var test = new HeatMap();
-                //var x = Task.Run(() => test.GetHeatmapSendToELK("faed82c1-8a22-47f3-8ca4-25ed5a41e5b4")).Result;
+                var GetHeatMapOBJ = new HeatMap();
+                var x = Task.Run(() => GetHeatMapOBJ.GetHeatmapSendToELK("test-asd-asdasd-******-asdasdasdas")).Result;
 
-                //var test1 = new GetDemoographics();
-                //var y = Task.Run(() => test1.GetDemographicsSendToELK("faed82c1-8a22-47f3-8ca4-25ed5a41e5b4")).Result;
+                var GetDemographicsObj = new GetDemoographics();
+                var y = Task.Run(() => GetDemographicsObj.GetDemographicsSendToELK("yyyysydgysgd-dasda-asd-8casda4-*******")).Result;
 
-                //GroupFootFall.GroupFootFallFun();
+                GroupFootFall.GroupFootFallFun();
 
                 var obj = new ELKHelper();
                 obj.DeleteDataFromElk();

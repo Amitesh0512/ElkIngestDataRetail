@@ -25,7 +25,7 @@ namespace ElkIngestDataRetail
                 var month = DateTimeOffset.Now.Month;
                 var year = DateTimeOffset.Now.Year;
 
-                string indexType = "elktanishqtest1";
+                string indexType = "elktest1";
                 var DateInString = String.Concat(year, month, day);
                 var indexName = String.Concat(indexType, "_", DateInString);
 
@@ -49,14 +49,14 @@ namespace ElkIngestDataRetail
         {
             try
             {
-                var uri = new Uri("https://elk.iwizardsolutions.com:7200/");
+                var uri = new Uri("https://localhost:7200/");
                 var settings = new ConnectionSettings(uri);
                 var client = new ElasticClient(settings);
                 var day = groupfootfall.timestamp.Date.ToString("dd");
                 var month = groupfootfall.timestamp.Date.ToString("MM");
                 var year = groupfootfall.timestamp.Year;
 
-                string indexType = "tanishq_prod";
+                string indexType = "_prod";
                 var DateInString = String.Concat(year, month, day);
                 var indexName = String.Concat(indexType, "_", DateInString);
 
@@ -85,14 +85,14 @@ namespace ElkIngestDataRetail
         {
             try
             {
-                var uri = new Uri("https://elk.iwizardsolutions.com:7200/");
+                var uri = new Uri("https://localhost:7200/");
                 var settings = new ConnectionSettings(uri);
                 var client = new ElasticClient(settings);
                 var day = heatmap.timestamp.Day;
                 var month = heatmap.timestamp.Month;
                 var year = heatmap.timestamp.Year;
 
-                string indexType = "tanishq_elk_prod";
+                string indexType = "_elk_prod";
                 var DateInString = String.Concat(year, month, day);
                 var indexName = String.Concat(indexType, "_", DateInString);
 
@@ -133,7 +133,7 @@ namespace ElkIngestDataRetail
                 var month = DateTimeOffset.Now.Month;
                 var year = DateTimeOffset.Now.Year;
 
-                string indexType = "elktanishqtest1_20201216";
+                string indexType = "elktest1_20201216";
                 var DateInString = String.Concat(year, month, day);
                 var indexName = String.Concat(indexType, "_", DateInString);
 
@@ -165,7 +165,7 @@ namespace ElkIngestDataRetail
             try
             {
 
-                var uri = new Uri("http://127.0.0.1:9200/");
+                var uri = new Uri("http://localhost:9200/");
                 var settings = new ConnectionSettings(uri);
                 var client = new ElasticClient(settings);
                 var day = DateTimeOffset.Now.Day;
@@ -174,7 +174,7 @@ namespace ElkIngestDataRetail
 
                 var searchID = "nKt5anYBivAaQj_VvueF";
 
-                string indexType = "elktanishqtest1_20201216";
+                string indexType = "elktest1_20201216";
                 var DateInString = String.Concat(year, month, day);
                 var indexName = String.Concat(indexType, "_", DateInString);
                 var response = client.Delete<RetailGroupFoolFallElk>(searchID, d => d

@@ -111,10 +111,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Demographics.cs" />
     <Compile Include="ELKHelper.cs" />
     <Compile Include="GetDemoographics.cs" />
-    <Compile Include="GetHeatMap.cs" />
     <Compile Include="GroupFootFall.cs" />
     <Compile Include="HeatMap.cs" />
     <Compile Include="Models.cs" />

@@ -17,7 +17,7 @@ namespace ElkIngestDataRetail
         public async Task<FunctionResponseModel> GetHeatmapSendToELK(string CustId)
         {
             FunctionResponseModel _response = new FunctionResponseModel();
-            var influxDbClient = new InfluxDbClient("http://104.211.218.225:8086/", "username", "password", InfluxDbVersion.v_1_3);
+            var influxDbClient = new InfluxDbClient("http://influxurl:8086/", "username", "password", InfluxDbVersion.v_1_3);
             var ping = await influxDbClient.Diagnostics.PingAsync();
 
             try
@@ -26,7 +26,7 @@ namespace ElkIngestDataRetail
                 {
                     List<GetHeatmapResponseModel> HeatMapList = new List<GetHeatmapResponseModel>();
 
-                    var query1 = "SELECT time,CameraId,MemberCount,XCord,YCord,StoreId FROM \"HeatMap\"  WHERE \"CustId\"='" + CustId + "'";
+                    var query1 = "SELECT time,CameraId,MemberCount,XCord,YCord,StoreId FROM \"MeasurementName\"  WHERE \"CustId\"='" + CustId + "'";
 
                     var response = await influxDbClient.Client.QueryAsync(query1, "RT_Tanishq_PROD");
 
