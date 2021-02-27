@@ -118,7 +118,6 @@
     <Compile Include="Models.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TableOccupancy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
