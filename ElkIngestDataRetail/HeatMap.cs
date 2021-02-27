@@ -28,7 +28,7 @@ namespace ElkIngestDataRetail
 
                     var query1 = "SELECT time,CameraId,MemberCount,XCord,YCord,StoreId FROM \"MeasurementName\"  WHERE \"CustId\"='" + CustId + "'";
 
-                    var response = await influxDbClient.Client.QueryAsync(query1, "RT_Tanishq_PROD");
+                    var response = await influxDbClient.Client.QueryAsync(query1, "DatabaseName");
 
                     IEnumerable<Serie> series = response;
 
